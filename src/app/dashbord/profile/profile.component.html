@@ -1,0 +1,65 @@
+
+  
+  <div class="profile row">
+  
+     
+
+     <div class=" col-sm-7" >
+        <div *ngFor="let i of obj"  >
+            <div class="pfdata">
+             <img src={{i.Avatar}}  class="profilePic" height="100px" weight="100px" />  
+              <div class="pfdataChild">
+                <h3><b>OHR:</b> {{i.OHR}}</h3>
+                <div>
+                    <h3><b>Name:</b> {{i.Name}}</h3>
+                </div>
+                <div >
+                    <h3><b>Role:</b> {{i.Role}}</h3>
+                </div>
+                <div>
+                    <h3><b>Rating:</b> {{i.Rating}}</h3>
+                </div>
+               </div> 
+        </div>
+        </div>
+    </div>
+     
+     <div class="com col-sm-5">
+     
+
+     <div class="dropdown">
+  <button class="dropbtn">Menu</button>
+  <div class="dropdown-content"  >
+  <div *ngFor="let i of obj">
+    <a [routerLink]="['/dashbord/edit',i.OHR]" >Edit Profile</a>
+ 
+    <a [routerLink]="['/dashbord/reset',i.OHR]">Reset Password</a>
+  </div>
+    <a href="#">Sign Out</a>
+  </div>
+</div>
+     <form (submit)="addComment()">
+    <input type="text" name="inputComment" placeholder="Add your Comment here.." class="comment-input" 
+    
+      [(ngModel)]="inputComment"
+    />
+   <input type="submit" value="Add Comment" class="comment-submit"/>   
+  </form>
+           
+     </div>
+
+
+ </div>
+
+
+<div >
+<h4 style="margin-left:15%;margin-top:2%">Comments:</h4>
+<!--  comment Section-->
+<div *ngFor="let c of comments ;let i=index;" class="comments">
+    
+  <div ><b>{{i}}.{{c.Email}}</b></div>
+  
+  <div >{{c.Body}} </div> 
+  <button class="delete" (click)="deleteComment(i)">Remove</button>
+</div>
+   

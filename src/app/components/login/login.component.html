@@ -1,0 +1,41 @@
+<div class="row">
+    
+    
+    <div class="col-4">
+    
+    </div>
+    
+    <div class="col-4">
+        <div class="Login">
+        <span style="color:red ;font-size:30px;font-weight:800" >Login</span>
+        </div>
+          <form #userlogin = "ngForm" (ngSubmit) = "onSubmit(userlogin.value)">
+         <div class="form-group row">
+         
+          <div class="col-sm-10">
+            <input type="email" value="eve.holt@reqres.in" class="form-control" id="inputEmail" placeholder="Email" name="email" ngModel email required  #email="ngModel">
+            <span  class="error" *ngIf="email.touched && !email.valid">Please Enter correct  Email</span>
+          </div>
+       </div>
+        <div class="form-group row">
+          
+          <div class="col-sm-10">
+            <input type="password" class="form-control" id="inputPassword" placeholder="Password" name="password" ngModel  required #password="ngModel">
+            <span  class="error" *ngIf="password.touched && !password.valid">Please enter your password</span>
+          </div>
+       </div>
+       <button type="submit" class="btn-get-started" [disabled]="!userlogin.valid">Login</button>
+       <span id="login"></span>
+        <h4>Dont have an account?<a routerLink="/signup">Register</a></h4>
+
+      </form>
+
+    </div>
+    
+    
+    <div class="col-4">
+   <h4 style="color:red;margin-top:30%"> *Note :Login using dummy backend API 
+          Use "https://reqres.in/" API
+          or use email :"eve.holt@reqres.in" </h4>
+    </div>
+</div>

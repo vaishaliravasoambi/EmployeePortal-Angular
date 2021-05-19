@@ -1,0 +1,34 @@
+<nav class="navbar">
+  <input class="search form-control" type="text" name="Name" [(ngModel)]="search"   placeholder="Type here to Search"/>
+</nav>
+<div class="view">
+ <button class="Lview" routerLink="/dashbord/list">List view</button>
+ <button class="Cview" routerLink="/dashbord/card">Card view</button>
+ </div>
+<div class="container">
+<table class="table table-trapped">
+    <thead>
+      <tr>
+         <th>Sr. No</th>
+         <th>Employee OHR</th>
+         <th>Name</th>
+         <th>Role</th>
+         <th>Rating</th>
+       </tr>
+     </thead>
+        <tbody>
+        
+            <tr *ngFor="let data of obj |filter:search | paginate: {itemsPerPage: 5 , currentPage: page}; let i = index">
+            <td>{{i+1}}</td>
+             
+             <td><a [routerLink]="['/dashbord/profile', data.OHR]" class="anchor" >{{data.OHR}}</a></td>
+              <td>{{data.Name}}</td>
+               <td>{{data.Role}}</td>
+                <td>{{data.Rating}}</td>
+               
+            </tr>
+        </tbody>
+        <pagination-controls (pageChange)="page = $event" >
+          </pagination-controls>
+</table>
+</div>

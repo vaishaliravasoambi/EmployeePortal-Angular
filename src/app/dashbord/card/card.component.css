@@ -1,0 +1,22 @@
+.hole{
+    display: flex;
+    margin-top: 5%;
+    margin-left:6% ;
+    
+
+}
+.example-card {
+   
+    max-width: 250px;
+    height: 250px;
+    margin-bottom: 10%;
+    margin-right: 5%;
+  }
+  
+  .example-header-image {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+  }
+  .profile{
+    object-fit: cover;
+  }

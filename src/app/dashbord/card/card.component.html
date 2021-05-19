@@ -1,0 +1,15 @@
+<div class="hole row">
+
+<mat-card *ngFor="let data of obj" class=" col-sm-4 example-card">
+  <mat-card-header>
+   
+    <mat-card-title>{{data.Name}}</mat-card-title>
+    <mat-card-subtitle>{{data.Role}}</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image class="profile" src={{data.Avatar}} alt="Profile">
+  <mat-card-content>
+    {{data.Rating}}
+  </mat-card-content>
+  
+</mat-card>
+</div>

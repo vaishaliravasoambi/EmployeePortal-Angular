@@ -1,0 +1,21 @@
+
+{
+ "emp": [
+   {
+        "OHR":703280877,
+        "Name":"vaishali Ambi",
+        "Role":"Consultant",
+        "Rating":3
+
+
+   } ,
+   {
+        "OHR":703281038,
+        "Name":"varsha Ambi",
+        "Role":"Senior Associate",
+        "Rating":4
+
+
+   }
+ ]
+}

@@ -1,0 +1,36 @@
+.search{
+    width:20%;
+    margin-left: 10%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+.anchor{
+    color: blue;
+    text-decoration: blue underline;
+}
+.anchor:hover{
+    color: red;
+    text-decoration:red underline;
+}
+
+.view{
+    display: flex;
+    margin-left: 70%;
+    margin-bottom: 2%;
+    height: 50px;
+
+}
+
+.Lview{
+
+  margin-left: 2%;
+  background-color: #03b1fc;
+  color: white;
+  
+}
+
+.Cview{
+    background-color:#03b1fc;
+    color: white;
+    border:none
+}
